@@ -155,10 +155,12 @@ class _RequestsPageState extends State<RequestsPage> {
             }
           }
         } else if (status == 'rejected') {
-          details = '❓ Hover to see reason';
+          details = 'Sorry, Hope to see you next time!';
         } else if (status == 'ended') {
           details = 'ended by: $tutorName\n';
           showRating = true;
+        } else if( status.toLowerCase()=='confirmed'){
+          details = 'Approved by: $tutorName\n🔗 $sessionLink\nExpires in: $remainingTime';
         }
 
         final statusColor = status == 'pending'
@@ -167,6 +169,8 @@ class _RequestsPageState extends State<RequestsPage> {
             ? Colors.green
             : status == 'rejected'
             ? Colors.red
+            : status == 'confirmed'
+            ? Colors.green
             : Colors.grey;
 
         return Request(
@@ -320,7 +324,7 @@ class _RequestsPageState extends State<RequestsPage> {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  if (request.tutorAvatar != null)
+                  if (request.status.toLowerCase() != 'rejected' && request.tutorAvatar != null)
                     Padding(
                       padding: const EdgeInsets.only(right: 8.0),
                       child: CircleAvatar(
@@ -329,16 +333,9 @@ class _RequestsPageState extends State<RequestsPage> {
                       ),
                     ),
                   Expanded(
-                    child: Text(request.details,
-                        style: const TextStyle(fontSize: 16)),
+                    child: Text(request.details, style: const TextStyle(fontSize: 16)),
                   ),
-                  if (request.status == 'Rejected' &&
-                      request.rejectionReason != null)
-                    Tooltip(
-                      message: request.rejectionReason!,
-                      child: const Icon(Icons.help_outline,
-                          color: Colors.redAccent),
-                    ),
+
                 ],
               ),
 
@@ -431,17 +428,39 @@ class _RequestsPageState extends State<RequestsPage> {
                   children: [
                     ElevatedButton(
                       onPressed: () async {
-                        await FirebaseFirestore.instance
-                            .collection('helpRequests')
-                            .doc(request.id.toString())
-                            .update({'status': 'confirmed'});
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                              content: Text("You have accepted the session!")),
-                        );
+                        try {
+                          // First search the document by chatId field
+                          final querySnapshot = await FirebaseFirestore.instance
+                              .collection('helpRequests')
+                              .where('chatId', isEqualTo: request.chatId)
+                              .get();
+
+                          if (querySnapshot.docs.isNotEmpty) {
+                            // Get the first matching document
+                            final docId = querySnapshot.docs.first.id;
+
+                            // Update the status to confirmed
+                            await FirebaseFirestore.instance
+                                .collection('helpRequests')
+                                .doc(docId)
+                                .update({'status': 'confirmed'});
+
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text("You have accepted the session!")),
+                            );
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text("Request not found.")),
+                            );
+                          }
+                        } catch (e) {
+                          print('Error confirming the session: $e');
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text("Error accepting the session.")),
+                          );
+                        }
                       },
-                      style:
-                      ElevatedButton.styleFrom(backgroundColor: Colors.green),
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
                       child: const Text(
                         "Accept",
                         style: TextStyle(
@@ -451,17 +470,38 @@ class _RequestsPageState extends State<RequestsPage> {
                     ),
                     ElevatedButton(
                       onPressed: () async {
-                        await FirebaseFirestore.instance
-                            .collection('helpRequests')
-                            .doc(request.id.toString())
-                            .update({'status': 'rejected'});
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                              content: Text("You have rejected the session.")),
-                        );
+                        try {
+                          // First search the document by chatId field
+                          final querySnapshot = await FirebaseFirestore.instance
+                              .collection('helpRequests')
+                              .where('chatId', isEqualTo: request.chatId)
+                              .get();
+
+                          if (querySnapshot.docs.isNotEmpty) {
+                            final docId = querySnapshot.docs.first.id;
+
+                            // Update the status to Rejected
+                            await FirebaseFirestore.instance
+                                .collection('helpRequests')
+                                .doc(docId)
+                                .update({'status': 'Rejected'});
+
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text("You have rejected the session!")),
+                            );
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text("Request not found.")),
+                            );
+                          }
+                        } catch (e) {
+                          print('Error rejecting the session: $e');
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text("Error rejecting the session.")),
+                          );
+                        }
                       },
-                      style:
-                      ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                       child: const Text(
                         "Reject",
                         style: TextStyle(
@@ -470,7 +510,7 @@ class _RequestsPageState extends State<RequestsPage> {
                       ),
                     ),
                   ],
-                ),
+                )
               ],
             ],
 

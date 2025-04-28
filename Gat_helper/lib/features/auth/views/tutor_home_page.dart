@@ -88,8 +88,11 @@ class _TutorHomepageState extends State<TutorHomepage> {
                   bool hasPendingRequest = false;
 
                   for (var request in snapshot.data!.docs) {
+
                     final requestData = request.data() as Map<String, dynamic>;
-                    if (requestData['status'] == 'pending' ) {
+                    final rejectedTutors = (requestData['rejectedTutors'] ?? []) as List<dynamic>;
+
+                    if (requestData['status'] == 'pending' && !rejectedTutors.contains(currentUid) ) {
                       hasPendingRequest = true;
                       break; // Stop as soon as we find a pending request
                     }
