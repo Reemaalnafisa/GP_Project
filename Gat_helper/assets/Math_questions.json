@@ -1,0 +1,497 @@
+[{
+  "question": "What is the area of a triangle with base 10 cm and height 5 cm?",
+  "correct_answer": "25 cm²",
+  "wrong_answers": ["50 cm²", "20 cm²", "30 cm²"]
+},
+{
+"question": "If a rectangle has a width of 4m and a length of 10m, what is its area?",
+"correct_answer": "40 m²",
+"wrong_answers": ["20 m²", "30 m²", "50 m²"]
+},
+{
+"question": "A bottle contains 1.5 liters of water. How many milliliters is this?",
+"correct_answer": "1500 mL",
+"wrong_answers": ["1000 mL", "2000 mL", "1200 mL"]
+},
+{
+"question": "If a clock shows 4:15 PM, what will be the time after 90 minutes?",
+"correct_answer": "5:45 PM",
+"wrong_answers": ["5:30 PM", "6:00 PM", "6:15 PM"]
+},
+{
+"question": "Which of the following is an odd number?",
+"correct_answer": "13",
+"wrong_answers": ["12", "14", "16"]
+},
+{
+"question": "If a book costs $12 and a pen costs $3, how much do 3 books and 2 pens cost?",
+"correct_answer": "$42",
+"wrong_answers": ["$36", "$45", "$48"]
+},
+{
+"question": "If 8 people share a $400 bill equally, how much does each person pay?",
+"correct_answer": "$50",
+"wrong_answers": ["$40", "$60", "$70"]
+},
+{
+"question": "How many faces does a rectangular prism have?",
+"correct_answer": "6",
+"wrong_answers": ["4", "8", "10"]
+},
+{
+"question": "If 2x + 3 = 11, what is the value of x?",
+"correct_answer": "4",
+"wrong_answers": ["3", "5", "6"]
+},
+{
+"question": "What is the smallest even number?",
+"correct_answer": "2",
+"wrong_answers": ["0", "4", "6"]
+},
+{
+"question": "What is the area of a triangle with base 10 cm and height 5 cm?",
+"correct_answer": "25 cm²",
+"wrong_answers": ["50 cm²", "20 cm²", "30 cm²"]
+},
+{
+"question": "If a rectangle has a width of 4m and a length of 10m, what is its area?",
+"correct_answer": "40 m²",
+"wrong_answers": ["20 m²", "30 m²", "50 m²"]
+},
+{
+"question": "A bottle contains 1.5 liters of water. How many milliliters is this?",
+"correct_answer": "1500 mL",
+"wrong_answers": ["1000 mL", "2000 mL", "1200 mL"]
+},
+{
+"question": "If a clock shows 4:15 PM, what will be the time after 90 minutes?",
+"correct_answer": "5:45 PM",
+"wrong_answers": ["5:30 PM", "6:00 PM", "6:15 PM"]
+},
+{
+"question": "Which of the following is an odd number?",
+"correct_answer": "13",
+"wrong_answers": ["12", "14", "16"]
+},
+{
+"question": "If a book costs $12 and a pen costs $3, how much do 3 books and 2 pens cost?",
+"correct_answer": "$42",
+"wrong_answers": ["$36", "$45", "$48"]
+},
+{
+"question": "If 8 people share a $400 bill equally, how much does each person pay?",
+"correct_answer": "$50",
+"wrong_answers": ["$40", "$60", "$70"]
+},
+{
+"question": "How many faces does a rectangular prism have?",
+"correct_answer": "6",
+"wrong_answers": ["4", "8", "10"]
+},
+
+{
+"question": "What is the value of the expression: (0.01)³?",
+"correct_answer": "0.000001",
+"wrong_answers": ["0.0001", "0.00001", "0.001001"]
+},
+{
+"question": "If a - b = 5, b - c = 3, c + d = 1, then find the value of a + d.",
+"correct_answer": "9",
+"wrong_answers": ["1", "4", "8"]
+},
+{
+"question": "Compare between: 249⁵³ - 33⁵³",
+"correct_answer": "Equal values",
+"wrong_answers": ["The first value > the second value", "The second value > the first value", "Givens are not enough"]
+},
+{
+"question": "What is the value of π (pi) approximately?",
+"correct_answer": "3.14",
+"wrong_answers": ["2.71", "1.62", "3.00"]
+},
+{
+"question": "How many different pairs of numbers can you form by adding two distinct numbers from the set {2, 4, 5, 6, 9}?",
+"correct_answer": "10",
+"wrong_answers": ["12", "16", "24"]
+},
+{
+"question": "What is the sum of numbers from 1 to 100?",
+"correct_answer": "5050",
+"wrong_answers": ["5000", "5100", "4900"]
+},
+{
+"question": "What is the result of dividing one prime number by another prime number?",
+"correct_answer": "Fraction",
+"wrong_answers": ["1", "2", "Whole Number"]
+},
+{
+"question": "What is the value of (13)² - (11)² ?",
+"correct_answer": "48",
+"wrong_answers": ["15", "20", "24"]
+},
+{
+"question": "What number, when multiplied by five and subtracted by 10, equals the sum of 18 + 20 + 2?",
+"correct_answer": "10",
+"wrong_answers": ["2", "4", "8"]
+},
+{
+"question": "How many tens are in 765?",
+"correct_answer": "76",
+"wrong_answers": ["60", "65", "70"]
+},
+{
+"question": "Which of the following numbers can be expressed in the form 6ⁿ?",
+"correct_answer": "222",
+"wrong_answers": ["325", "427", "434"]
+},
+{
+"question": "If Hend reads 50 pages in 20 minutes, how many pages can she read in 4 hours if she continued at the same rate?",
+"correct_answer": "600",
+"wrong_answers": ["150", "400", "500"]
+},
+{
+"question": "Find the difference between the largest and smallest numbers composed of the digits (1, 2, 3, 4), where the number is greater than 1000 without repeating any digit.",
+"correct_answer": "3087",
+"wrong_answers": ["2567", "2387", "3178"]
+},
+{
+"question": "Compare between: 5³ ÷ (3/5)²",
+"correct_answer": "First value > Second value",
+"wrong_answers": ["Second value > First value", "Equal values", "Givens are not enough"]
+},
+{
+"question": "Find the arithmetic mean of x and y if 5y/520 = 5x.",
+"correct_answer": "20",
+"wrong_answers": ["10", "15", "25"]
+},
+{
+"question": "What is the value of: 1100 + 1001 ?",
+"correct_answer": "1001",
+"wrong_answers": ["100", "101", "102"]
+},
+{
+"question": "If (n) is an integer, which of the following numbers can be expressed in the form (6n)?",
+"correct_answer": "222",
+"wrong_answers": ["325", "427", "434"]
+},
+{
+"question": "If the average of the values: x, x + 3, x + 4, x + 5 is 11, what is the value of x?",
+"correct_answer": "7",
+"wrong_answers": ["8", "3", "2"]
+},
+{
+"question": "Compare: 3x-2 vs. 3x",
+"correct_answer": "3x > 3x-2",
+"wrong_answers": ["3x < 3x-2", "Equal", "Givens are not enough"]
+},
+{
+"question": "If 5x - 10 = 40, what is the value of x?",
+"correct_answer": "10",
+"wrong_answers": ["2", "4", "8"]
+},
+{
+"question": "What is the sum of the angles in a triangle?",
+"correct_answer": "180 degrees",
+"wrong_answers": ["360 degrees", "90 degrees", "270 degrees"]
+},
+{
+"question": "What is the smallest prime number?",
+"correct_answer": "2",
+"wrong_answers": ["1", "3", "5"]
+},
+{
+"question": "A train travels 100 km in 2 hours. What is its speed?",
+"correct_answer": "50 km/h",
+"wrong_answers": ["25 km/h", "100 km/h", "75 km/h"]
+},
+{
+"question": "Which number is divisible by both 2 and 3?",
+"correct_answer": "18",
+"wrong_answers": ["25", "13", "21"]
+},
+{
+"question": "What is the square root of 81?",
+"correct_answer": "9",
+"wrong_answers": ["8", "10", "7"]
+},
+{
+"question": "If x + 5 = 15, what is the value of x?",
+"correct_answer": "10",
+"wrong_answers": ["5", "15", "20"]
+},
+{
+"question": "What is 25% of 200?",
+"correct_answer": "50",
+"wrong_answers": ["25", "75", "100"]
+},
+{
+"question": "What is the area of a rectangle with width 4m and length 6m?",
+"correct_answer": "24 m²",
+"wrong_answers": ["10 m²", "20 m²", "30 m²"]
+},
+{
+"question": "How many sides does a pentagon have?",
+"correct_answer": "5",
+"wrong_answers": ["4", "6", "8"]
+},
+{
+"question": "Which fraction is equivalent to 0.5?",
+"correct_answer": "1/2",
+"wrong_answers": ["1/3", "1/4", "2/3"]
+},
+{
+"question": "Solve for x: 2x = 16",
+"correct_answer": "8",
+"wrong_answers": ["6", "10", "12"]
+},
+{
+"question": "A store sells 3 apples for $2. How much do 12 apples cost?",
+"correct_answer": "$8",
+"wrong_answers": ["$6", "$10", "$12"]
+},
+{
+"question": "If 3x + 4 = 19, what is x?",
+"correct_answer": "5",
+"wrong_answers": ["4", "6", "3"]
+},
+{
+"question": "How many minutes are there in 3 hours?",
+"correct_answer": "180 minutes",
+"wrong_answers": ["120 minutes", "150 minutes", "200 minutes"]
+},
+{
+"question": "What is the perimeter of a square with a side length of 5m?",
+"correct_answer": "20m",
+"wrong_answers": ["10m", "15m", "25m"]
+},
+{
+"question": "What is the largest two-digit prime number?",
+"correct_answer": "97",
+"wrong_answers": ["89", "91", "99"]
+},
+{
+"question": "What is the value of 3⁴?",
+"correct_answer": "81",
+"wrong_answers": ["27", "64", "72"]
+},
+{
+"question": "Which is the smallest odd prime number?",
+"correct_answer": "3",
+"wrong_answers": ["1", "5", "7"]
+},
+{
+"question": "What is 12 × 12?",
+"correct_answer": "144",
+"wrong_answers": ["124", "156", "132"]
+},
+{
+"question": "If you double 15 and then add 10, what do you get?",
+"correct_answer": "40",
+"wrong_answers": ["30", "35", "50"]
+},
+{
+"question": "What is the remainder when 50 is divided by 7?",
+"correct_answer": "1",
+"wrong_answers": ["0", "2", "3"]
+},
+{
+"question": "If a circle has a radius of 7 cm, what is its diameter?",
+"correct_answer": "14 cm",
+"wrong_answers": ["7 cm", "21 cm", "10 cm"]
+},
+{
+"question": "What is the sum of the interior angles of a hexagon?",
+"correct_answer": "720 degrees",
+"wrong_answers": ["360 degrees", "540 degrees", "600 degrees"]
+},
+{
+"question": "Which is the only even prime number?",
+"correct_answer": "2",
+"wrong_answers": ["4", "6", "8"]
+},
+{
+"question": "If a square has an area of 36m², what is the length of each side?",
+"correct_answer": "6m",
+"wrong_answers": ["5m", "7m", "8m"]
+},
+{
+"question": "What is the decimal equivalent of 3/4?",
+"correct_answer": "0.75",
+"wrong_answers": ["0.5", "0.33", "0.25"]
+},
+{
+"question": "Which is larger: 3/4 or 5/6?",
+"correct_answer": "5/6",
+"wrong_answers": ["3/4", "They are equal", "Cannot be determined"]
+},
+{
+"question": "If you roll a standard die, what is the probability of rolling an even number?",
+"correct_answer": "1/2",
+"wrong_answers": ["1/3", "2/3", "1/4"]
+},
+{
+"question": "A shop sells pencils in packs of 12. How many packs do you need to buy to get 72 pencils?",
+"correct_answer": "6",
+"wrong_answers": ["5", "7", "8"]
+},
+{
+"question": "What is the median of the numbers: 5, 10, 15, 20, 25?",
+"correct_answer": "15",
+"wrong_answers": ["10", "20", "12"]
+},
+{
+"question": "If x² = 49, what is the value of x?",
+"correct_answer": "±7",
+"wrong_answers": ["7", "-7", "0"]
+},
+{
+"question": "What is the result of 7 × 8?",
+"correct_answer": "56",
+"wrong_answers": ["42", "48", "64"]
+},
+{
+"question": "If 6 pencils cost $3, how much do 12 pencils cost?",
+"correct_answer": "$6",
+"wrong_answers": ["$4", "$8", "$10"]
+},
+{
+"question": "Which number is a multiple of both 3 and 5?",
+"correct_answer": "15",
+"wrong_answers": ["10", "20", "25"]
+},
+{
+"question": "What is the square of 12?",
+"correct_answer": "144",
+"wrong_answers": ["121", "132", "156"]
+},
+{
+"question": "A clock shows 9:45 AM. What will be the time after 2 hours and 30 minutes?",
+"correct_answer": "12:15 PM",
+"wrong_answers": ["12:30 PM", "11:15 AM", "11:45 AM"]
+},
+{
+"question": "If a rectangle has a perimeter of 24 cm and one side is 6 cm, what is the length of the other side?",
+"correct_answer": "6 cm",
+"wrong_answers": ["4 cm", "8 cm", "10 cm"]
+},
+{
+"question": "Which of the following is the largest fraction?",
+"correct_answer": "7/8",
+"wrong_answers": ["3/4", "2/3", "5/6"]
+},
+{
+"question": "If a car travels 60 km in 1 hour, how far will it travel in 4 hours at the same speed?",
+"correct_answer": "240 km",
+"wrong_answers": ["200 km", "180 km", "300 km"]
+},
+{
+"question": "A bag contains 3 red balls and 5 blue balls. What is the probability of drawing a red ball?",
+"correct_answer": "3/8",
+"wrong_answers": ["1/2", "5/8", "1/3"]
+},
+{
+"question": "What is the sum of 1 + 2 + 3 + ... + 10?",
+"correct_answer": "55",
+"wrong_answers": ["50", "60", "45"]
+},
+{
+"question": "If a shop sells a dress for $80 after a 20% discount, what was its original price?",
+"correct_answer": "$100",
+"wrong_answers": ["$90", "$120", "$85"]
+},
+{
+"question": "Which of the following numbers is a perfect cube?",
+"correct_answer": "64",
+"wrong_answers": ["49", "81", "100"]
+},
+{
+"question": "A triangle has angles of 45° and 45°. What is the third angle?",
+"correct_answer": "90°",
+"wrong_answers": ["60°", "75°", "80°"]
+},
+{
+"question": "What is the perimeter of a circle called?",
+"correct_answer": "Circumference",
+"wrong_answers": ["Diameter", "Radius", "Area"]
+},
+{
+"question": "If 5x = 25, what is the value of x?",
+"correct_answer": "5",
+"wrong_answers": ["10", "15", "20"]
+},
+{
+"question": "Which number is neither prime nor composite?",
+"correct_answer": "1",
+"wrong_answers": ["0", "2", "3"]
+},
+{
+"question": "What is the sum of the angles in a quadrilateral?",
+"correct_answer": "360 degrees",
+"wrong_answers": ["180 degrees", "270 degrees", "450 degrees"]
+},
+{
+"question": "A cube has how many faces?",
+"correct_answer": "6",
+"wrong_answers": ["4", "8", "10"]
+},
+{
+"question": "What is the result of 15% of 200?",
+"correct_answer": "30",
+"wrong_answers": ["25", "40", "50"]
+},
+{
+"question": "A right-angled triangle has one angle of 30°. What is the other non-right angle?",
+"correct_answer": "60°",
+"wrong_answers": ["45°", "75°", "80°"]
+},
+{
+"question": "Which number is the largest: 2³, 3², or 4²?",
+"correct_answer": "4²",
+"wrong_answers": ["2³", "3²", "All are equal"]
+},
+{
+"question": "How many edges does a cube have?",
+"correct_answer": "12",
+"wrong_answers": ["6", "8", "10"]
+},
+{
+"question": "If a train travels 90 km in 3 hours, what is its speed?",
+"correct_answer": "30 km/h",
+"wrong_answers": ["25 km/h", "35 km/h", "40 km/h"]
+},
+{
+"question": "If a car’s speed is reduced by half, how much time will it take to travel the same distance?",
+"correct_answer": "Double the time",
+"wrong_answers": ["Half the time", "Same time", "One-third the time"]
+},
+{
+"question": "If 3 people can complete a job in 12 days, how many days will 6 people take?",
+"correct_answer": "6 days",
+"wrong_answers": ["8 days", "10 days", "4 days"]
+},
+{
+"question": "If the diameter of a circle is 14 cm, what is its radius?",
+"correct_answer": "7 cm",
+"wrong_answers": ["14 cm", "10 cm", "8 cm"]
+},
+{
+"question": "What is the average of the first 10 natural numbers?",
+"correct_answer": "5.5",
+"wrong_answers": ["5", "6", "4.5"]
+},
+{
+"question": "If the sum of two angles in a triangle is 100°, what is the third angle?",
+"correct_answer": "80°",
+"wrong_answers": ["70°", "60°", "90°"]
+},
+{
+"question": "If 2x + 3 = 11, what is the value of x?",
+"correct_answer": "4",
+"wrong_answers": ["3", "5", "6"]
+},
+{
+"question": "What is the smallest even number?",
+"correct_answer": "2",
+"wrong_answers": ["0", "4", "6"]
+}
+]

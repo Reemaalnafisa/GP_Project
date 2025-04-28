@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "346623125208",
+    "firebase_url": "https://gat-helper-default-rtdb.firebaseio.com",
+    "project_id": "gat-helper",
+    "storage_bucket": "gat-helper.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346623125208:android:c2d510a9927c7c780159ad",
+        "android_client_info": {
+          "package_name": "com.example.gat_helper"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBghZgwj4GIklSMzG82ZtRsrR5oy-uTwZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346623125208:android:eae7ea93913d70670159ad",
+        "android_client_info": {
+          "package_name": "com.example.gat_helper_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBghZgwj4GIklSMzG82ZtRsrR5oy-uTwZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

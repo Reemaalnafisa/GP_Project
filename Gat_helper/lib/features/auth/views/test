@@ -1,0 +1,39 @@
+class LeaderWidget extends StatelessWidget {
+  final int gameId; // المتغير لاستقبال gameId
+
+  LeaderWidget({required this.gameId}); // المُنشئ لاستقبال gameId
+
+  @override
+  Widget build(BuildContext context) {
+    // استرجاع البيانات باستخدام gameId
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Leader Widget'),
+      ),
+      body: FutureBuilder(
+        future: FirebaseFirestore.instance.collection('GroupGames').doc(gameId.toString()).get(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(child: CircularProgressIndicator());
+          } else if (snapshot.hasError) {
+            return Center(child: Text('Error: ${snapshot.error}'));
+          } else if (!snapshot.hasData || !snapshot.data.exists) {
+            return Center(child: Text('No game found'));
+          } else {
+            var gameData = snapshot.data.data();
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Game ID: ${gameData['gameId']}'),
+                  Text('Status: ${gameData['status']}'),
+                  // إضافة المزيد من البيانات هنا حسب الحاجة
+                ],
+              ),
+            );
+          }
+        },
+      ),
+    );
+  }
+}

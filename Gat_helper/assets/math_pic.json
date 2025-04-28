@@ -1,0 +1,116 @@
+[
+    {
+        "question": "A square with a side length of 4 cm has 4 semicircles drawn inside it. Find the area of the shaded region.",
+        "correct_answer": "8π - 32",
+        "wrong_answers": ["32 - 8π", "16 - 8π", "8π - 16"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMG_5137%202.jpg?alt=media&token=85941d33-0c36-4a41-b9de-f0fc07f61951"
+    },
+    {
+        "question": "Which point of the following is inside the triangle?",
+        "correct_answer": "(2, -3)",
+        "wrong_answers": ["(3, -3)", "(-5, 2)", "(1, -2)"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMAGE%202025-03-18%2008%3A51%3A17.jpg?alt=media&token=28633a96-df9a-4ea0-86dc-df1ee525bb97"
+    },
+    {
+        "question": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMAGE%202025-03-18%2008%3A51%3A14.jpg?alt=media&token=c3b82f9e-76a1-437c-a111-6fae4e9f1963",
+        "correct_answer": "8",
+        "wrong_answers": ["5", "6", "12"],
+        "image": "/mnt/data/IMG_5133.jpg"
+    },
+    {
+        "question": "Find x.",
+        "correct_answer": "80°",
+        "wrong_answers": ["65°", "55°", "50°"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/photo_2025-03-18%2008.47.41.jpeg?alt=media&token=f692bee9-6090-4a7a-9c5f-197b6cdb2e60"
+    },
+    {
+        "question": "Find the angle of n.",
+        "correct_answer": "65°",
+        "wrong_answers": ["80°", "55°", "50°"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/photo_2025-03-18%2008.47.39.jpeg?alt=media&token=a36da489-dfcc-45d4-af1e-a375cd4517f6"
+    },
+    {
+        "question": "If the area of a square is 64, find the perimeter of a circle.",
+        "correct_answer": "8√2 π",
+        "wrong_answers": ["8π", "8√2", "8π"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMG_5140.jpg?alt=media&token=62c16f62-a671-401a-917c-e45209bbccba"
+    },
+    {
+        "question": "If the total number of students is 300, how many students are represented in a 60° sector of a circle graph?",
+        "correct_answer": "50",
+        "wrong_answers": ["90", "70", "80"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMG_5138%202.jpg?alt=media&token=e8c4f917-b966-4118-9c1f-b7db831027a5"
+    },
+    {
+        "question": "What is the ratio of the area of the triangle to a rectangle?",
+        "correct_answer": "1/2",
+        "wrong_answers": ["1/3", "2/3", "1/4"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMG_5139%202.jpg?alt=media&token=96f6902a-4ea0-4e9f-b473-bf75bc060738"
+    },
+    {
+        "question": "If the area of the square is 64 cm², what is the area of the circle?",
+        "correct_answer": "32π",
+        "wrong_answers": ["8√2 π", "6√2 π", "√2 π"],
+        "image": "/mnt/data/IMAGE 2025-03-14 21:41:57.jpg"
+    },
+    {
+        "question": "Find the length of AD.",
+        "correct_answer": "7",
+        "wrong_answers": ["5", "6", "10"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMG_5142.jpg?alt=media&token=2dabe412-acc2-4afc-9e4c-07bfce24d693"
+    },
+    {
+        "question": "Find the value of x + y.",
+        "correct_answer": "120°",
+        "wrong_answers": ["140°", "160°", "80°"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMG_5143%202.jpg?alt=media&token=785f84da-b70f-48fb-a087-cc61899c9879"
+    },
+    {
+        "question": "Find the measure of x + y + z.",
+        "correct_answer": "210°",
+        "wrong_answers": ["200°", "180°", "240°"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMG_5144%202.jpg?alt=media&token=1beed70e-523f-401b-90dd-467acb15e914"
+    },
+    {
+        "question": "Find the value of x.",
+        "correct_answer": "210°",
+        "wrong_answers": ["140°", "200°", "220°"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMG_5145%202.jpg?alt=media&token=1e49a885-e086-40e7-a73c-59c0c0c0afaa"
+    },
+    {
+        "question": "Find the value of y.",
+        "correct_answer": "80°",
+        "wrong_answers": ["55°", "50°", "70°"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMG_5146%202.jpg?alt=media&token=4754ccd4-9de4-4b20-9810-6b6a8ac77ba2"
+    },
+    {
+        "question": "Find the value of x.",
+        "correct_answer": "89°",
+        "wrong_answers": ["90°", "120°", "110°"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMG_5147%202.jpg?alt=media&token=4762bd66-663e-4785-af63-ca834ce778f1"
+    },
+    {
+        "question": "Find the value of x.",
+        "correct_answer": "20°",
+        "wrong_answers": ["60°", "40°", "50°"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMG_5148%202.jpg?alt=media&token=ff486182-e9a7-433f-a7b8-bc46a532a309"
+    },
+    {
+        "question": "Find the value of x.",
+        "correct_answer": "60°",
+        "wrong_answers": ["20°", "40°", "50°"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMG_5149%202.jpg?alt=media&token=3b6800e5-16ed-404c-a7f5-e789f357ab96"
+    },
+    {
+        "question": "Find x.",
+        "correct_answer": "42°",
+        "wrong_answers": ["36°", "70°", "25°"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMG_5151%202.jpg?alt=media&token=fc59c4f9-ea5f-4135-a03b-a25882bf9772"
+    },
+    {
+        "question": "Find the angle of x.",
+        "correct_answer": "135°",
+        "wrong_answers": ["120°", "130°", "145°"],
+        "image": "https://firebasestorage.googleapis.com/v0/b/gat-helper.firebasestorage.app/o/IMG_5152%202.jpg?alt=media&token=205b4423-b91e-46f3-8f4b-1c9bf6701863"
+    }
+]

@@ -1,0 +1,337 @@
+<html>
+<head>
+<title>sign_up_page.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #6aab73;}
+.s2 { color: #bcbec4;}
+.s3 { color: #cf8e6d;}
+.s4 { color: #7a7e85;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+sign_up_page.dart</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">'package:flutter/gestures.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:flutter/material.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:gat_helper_app/core/services/auth_service.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:gat_helper_app/features/auth/views/Parent_home_page.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:gat_helper_app/features/auth/views/student.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:gat_helper_app/features/common/login_page.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:gat_helper_app/features/common/start_page.dart'</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">'../../model/user_model.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'../auth/views/Sign_up_page_AR.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'../auth/views/tutor_home_page.dart'</span><span class="s2">;</span>
+
+<span class="s3">class </span><span class="s0">SignUpPage </span><span class="s3">extends </span><span class="s0">StatefulWidget </span><span class="s2">{</span>
+  <span class="s3">final </span><span class="s0">String userRole</span><span class="s2">; </span><span class="s4">// User Role parameter</span>
+
+  <span class="s3">const </span><span class="s0">SignUpPage</span><span class="s2">({</span><span class="s3">super</span><span class="s2">.</span><span class="s0">key</span><span class="s2">, </span><span class="s0">required </span><span class="s3">this</span><span class="s2">.</span><span class="s0">userRole</span><span class="s2">});</span>
+
+  <span class="s0">@override</span>
+  <span class="s0">State</span><span class="s2">&lt;</span><span class="s0">SignUpPage</span><span class="s2">&gt; </span><span class="s0">createState</span><span class="s2">() =&gt; </span><span class="s0">_SignUpPageState</span><span class="s2">();</span>
+<span class="s2">}</span>
+
+<span class="s3">class </span><span class="s0">_SignUpPageState </span><span class="s3">extends </span><span class="s0">State</span><span class="s2">&lt;</span><span class="s0">SignUpPage</span><span class="s2">&gt; {</span>
+  <span class="s3">final </span><span class="s0">AuthService authService </span><span class="s2">= </span><span class="s0">AuthService</span><span class="s2">();</span>
+  <span class="s0">String</span><span class="s2">? </span><span class="s0">_selectedGender</span><span class="s2">;</span>
+  <span class="s0">String</span><span class="s2">? </span><span class="s0">_selectedGrade</span><span class="s2">;</span>
+  <span class="s3">final </span><span class="s0">List</span><span class="s2">&lt;</span><span class="s0">String</span><span class="s2">&gt; </span><span class="s0">_genders </span><span class="s2">= [</span><span class="s1">'Male'</span><span class="s2">, </span><span class="s1">'Female'</span><span class="s2">];</span>
+  <span class="s3">final </span><span class="s0">List</span><span class="s2">&lt;</span><span class="s0">String</span><span class="s2">&gt; </span><span class="s0">_grades </span><span class="s2">= [</span><span class="s1">'10'</span><span class="s2">, </span><span class="s1">'11'</span><span class="s2">, </span><span class="s1">'12'</span><span class="s2">]; </span><span class="s4">// Grade levels for students</span>
+<span class="s3">final </span><span class="s0">nameController </span><span class="s2">= </span><span class="s0">TextEditingController</span><span class="s2">();</span>
+<span class="s3">final </span><span class="s0">emailController </span><span class="s2">= </span><span class="s0">TextEditingController</span><span class="s2">();</span>
+<span class="s3">final </span><span class="s0">pwdController </span><span class="s2">= </span><span class="s0">TextEditingController</span><span class="s2">();</span>
+
+
+  <span class="s0">@override</span>
+  <span class="s0">Widget build</span><span class="s2">(</span><span class="s0">BuildContext context</span><span class="s2">) {</span>
+    <span class="s3">final </span><span class="s0">screenWidth </span><span class="s2">= </span><span class="s0">MediaQuery</span><span class="s2">.</span><span class="s0">of</span><span class="s2">(</span><span class="s0">context</span><span class="s2">).</span><span class="s0">size</span><span class="s2">.</span><span class="s0">width</span><span class="s2">;</span>
+    <span class="s3">final </span><span class="s0">screenHeight </span><span class="s2">= </span><span class="s0">MediaQuery</span><span class="s2">.</span><span class="s0">of</span><span class="s2">(</span><span class="s0">context</span><span class="s2">).</span><span class="s0">size</span><span class="s2">.</span><span class="s0">height</span><span class="s2">;</span>
+
+    <span class="s3">return </span><span class="s0">Scaffold</span><span class="s2">(</span>
+      <span class="s0">body</span><span class="s2">: </span><span class="s0">Stack</span><span class="s2">(</span>
+        <span class="s0">children</span><span class="s2">: [</span>
+          <span class="s4">// Background Images in a Column</span>
+          <span class="s0">Positioned</span><span class="s2">(</span>
+            <span class="s0">top</span><span class="s2">: -</span><span class="s0">screenHeight </span><span class="s2">* </span><span class="s5">0.15</span><span class="s2">,</span>
+            <span class="s0">left</span><span class="s2">: -</span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">0.8</span><span class="s2">,</span>
+            <span class="s0">right</span><span class="s2">: -</span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">0.8</span><span class="s2">,</span>
+            <span class="s0">child</span><span class="s2">: </span><span class="s0">Image</span><span class="s2">.</span><span class="s0">asset</span><span class="s2">(</span>
+              <span class="s1">'assets/img_12.png'</span><span class="s2">,</span>
+              <span class="s0">fit</span><span class="s2">: </span><span class="s0">BoxFit</span><span class="s2">.</span><span class="s0">cover</span><span class="s2">,</span>
+              <span class="s0">width</span><span class="s2">: </span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">2.4</span><span class="s2">,</span>
+              <span class="s0">height</span><span class="s2">: </span><span class="s0">screenHeight </span><span class="s2">* </span><span class="s5">0.40</span><span class="s2">,</span>
+            <span class="s2">),</span>
+          <span class="s2">),</span>
+          <span class="s0">Positioned</span><span class="s2">(</span>
+            <span class="s0">bottom</span><span class="s2">: -</span><span class="s0">screenHeight </span><span class="s2">* </span><span class="s5">0.04</span><span class="s2">,  </span><span class="s4">// Decrease the negative value to move the image up</span>
+            <span class="s0">left</span><span class="s2">: -</span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">0.1</span><span class="s2">,</span>
+            <span class="s0">right</span><span class="s2">: -</span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">0.1</span><span class="s2">,</span>
+            <span class="s0">child</span><span class="s2">: </span><span class="s0">Image</span><span class="s2">.</span><span class="s0">asset</span><span class="s2">(</span>
+              <span class="s1">'assets/img_11.png'</span><span class="s2">,</span>
+              <span class="s0">fit</span><span class="s2">: </span><span class="s0">BoxFit</span><span class="s2">.</span><span class="s0">cover</span><span class="s2">,</span>
+              <span class="s0">width</span><span class="s2">: </span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">1.2</span><span class="s2">,</span>
+              <span class="s0">height</span><span class="s2">: </span><span class="s0">screenHeight </span><span class="s2">* </span><span class="s5">0.4</span><span class="s2">,</span>
+            <span class="s2">),</span>
+          <span class="s2">),</span>
+          <span class="s0">Positioned</span><span class="s2">(</span>
+            <span class="s0">bottom</span><span class="s2">: -</span><span class="s0">screenHeight </span><span class="s2">* </span><span class="s5">0.02</span><span class="s2">,  </span><span class="s4">// Moved this image further up by decreasing the negative value</span>
+            <span class="s0">left</span><span class="s2">: -</span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">0.1</span><span class="s2">,</span>
+            <span class="s0">right</span><span class="s2">: -</span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">0.1</span><span class="s2">,</span>
+            <span class="s0">child</span><span class="s2">: </span><span class="s0">Image</span><span class="s2">.</span><span class="s0">asset</span><span class="s2">(</span>
+              <span class="s1">'assets/img_10.png'</span><span class="s2">,</span>
+              <span class="s0">fit</span><span class="s2">: </span><span class="s0">BoxFit</span><span class="s2">.</span><span class="s0">cover</span><span class="s2">,</span>
+              <span class="s0">width</span><span class="s2">: </span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">1.2</span><span class="s2">,</span>
+              <span class="s0">height</span><span class="s2">: </span><span class="s0">screenHeight </span><span class="s2">* </span><span class="s5">0.35</span><span class="s2">,</span>
+            <span class="s2">),</span>
+          <span class="s2">),</span>
+          <span class="s0">Positioned</span><span class="s2">(</span>
+            <span class="s0">bottom</span><span class="s2">: -</span><span class="s0">screenHeight </span><span class="s2">* </span><span class="s5">0.13</span><span class="s2">,  </span><span class="s4">// Moved this image a bit up as well</span>
+            <span class="s0">left</span><span class="s2">: -</span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">0.1</span><span class="s2">,</span>
+            <span class="s0">right</span><span class="s2">: -</span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">0.1</span><span class="s2">,</span>
+            <span class="s0">child</span><span class="s2">: </span><span class="s0">Image</span><span class="s2">.</span><span class="s0">asset</span><span class="s2">(</span>
+              <span class="s1">'assets/img_9.png'</span><span class="s2">,</span>
+              <span class="s0">fit</span><span class="s2">: </span><span class="s0">BoxFit</span><span class="s2">.</span><span class="s0">cover</span><span class="s2">,</span>
+              <span class="s0">width</span><span class="s2">: </span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">1.2</span><span class="s2">,</span>
+              <span class="s0">height</span><span class="s2">: </span><span class="s0">screenHeight </span><span class="s2">* </span><span class="s5">0.3</span><span class="s2">,</span>
+            <span class="s2">),</span>
+          <span class="s2">),</span>
+
+
+
+          <span class="s4">// SafeArea for Back Button to ensure it's always on top</span>
+          <span class="s0">SafeArea</span><span class="s2">(</span>
+            <span class="s0">child</span><span class="s2">: </span><span class="s0">Padding</span><span class="s2">(</span>
+              <span class="s0">padding</span><span class="s2">: </span><span class="s3">const </span><span class="s0">EdgeInsets</span><span class="s2">.</span><span class="s0">all</span><span class="s2">(</span><span class="s5">16.0</span><span class="s2">),</span>
+              <span class="s0">child</span><span class="s2">: </span><span class="s0">IconButton</span><span class="s2">(</span>
+                <span class="s0">icon</span><span class="s2">: </span><span class="s3">const </span><span class="s0">Icon</span><span class="s2">(</span><span class="s0">Icons</span><span class="s2">.</span><span class="s0">arrow_back</span><span class="s2">, </span><span class="s0">color</span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">black</span><span class="s2">),</span>
+                <span class="s0">onPressed</span><span class="s2">: () {</span>
+                  <span class="s0">Navigator</span><span class="s2">.</span><span class="s0">pushReplacement</span><span class="s2">(</span>
+                    <span class="s0">context</span><span class="s2">,</span>
+                    <span class="s0">MaterialPageRoute</span><span class="s2">(</span><span class="s0">builder</span><span class="s2">: (</span><span class="s0">_</span><span class="s2">) =&gt; </span><span class="s0">StartPage</span><span class="s2">()),);</span>
+                <span class="s2">},</span>
+              <span class="s2">),</span>
+            <span class="s2">),</span>
+          <span class="s2">),</span>
+
+          <span class="s4">// Main Content</span>
+          <span class="s0">Align</span><span class="s2">(</span>
+            <span class="s0">alignment</span><span class="s2">: </span><span class="s0">Alignment</span><span class="s2">.</span><span class="s0">center</span><span class="s2">,</span>
+            <span class="s0">child</span><span class="s2">: </span><span class="s0">Padding</span><span class="s2">(</span>
+              <span class="s0">padding</span><span class="s2">: </span><span class="s3">const </span><span class="s0">EdgeInsets</span><span class="s2">.</span><span class="s0">all</span><span class="s2">(</span><span class="s5">16.0</span><span class="s2">),</span>
+              <span class="s0">child</span><span class="s2">: </span><span class="s0">SingleChildScrollView</span><span class="s2">(</span>
+                <span class="s0">child</span><span class="s2">: </span><span class="s0">Column</span><span class="s2">(</span>
+                  <span class="s0">mainAxisAlignment</span><span class="s2">: </span><span class="s0">MainAxisAlignment</span><span class="s2">.</span><span class="s0">start</span><span class="s2">,</span>
+                  <span class="s0">crossAxisAlignment</span><span class="s2">: </span><span class="s0">CrossAxisAlignment</span><span class="s2">.</span><span class="s0">start</span><span class="s2">,</span>
+                  <span class="s0">children</span><span class="s2">: [</span>
+                    <span class="s3">const </span><span class="s0">SizedBox</span><span class="s2">(</span><span class="s0">height</span><span class="s2">: </span><span class="s5">120</span><span class="s2">),</span>
+                    <span class="s0">Center</span><span class="s2">(</span>
+                      <span class="s0">child</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span>
+                        <span class="s1">'Welcome!'</span><span class="s2">,</span>
+                        <span class="s0">style</span><span class="s2">: </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontSize</span><span class="s2">: </span><span class="s5">20.0</span><span class="s2">, </span><span class="s0">fontWeight</span><span class="s2">: </span><span class="s0">FontWeight</span><span class="s2">.</span><span class="s0">w600</span><span class="s2">, </span><span class="s0">height</span><span class="s2">: -</span><span class="s5">7</span><span class="s2">),</span>
+                      <span class="s2">),</span>
+                    <span class="s2">),</span>
+                    <span class="s3">const </span><span class="s0">SizedBox</span><span class="s2">(</span><span class="s0">height</span><span class="s2">: </span><span class="s5">5.0</span><span class="s2">),</span>
+                    <span class="s0">Center</span><span class="s2">(</span>
+                      <span class="s0">child</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span>
+                        <span class="s1">&quot;Let's get started!&quot;</span><span class="s2">,</span>
+                        <span class="s0">style</span><span class="s2">: </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontSize</span><span class="s2">: </span><span class="s5">30.0</span><span class="s2">, </span><span class="s0">fontWeight</span><span class="s2">: </span><span class="s0">FontWeight</span><span class="s2">.</span><span class="s0">w600</span><span class="s2">, </span><span class="s0">height</span><span class="s2">: -</span><span class="s5">3</span><span class="s2">),</span>
+                      <span class="s2">),</span>
+                    <span class="s2">),</span>
+                    <span class="s3">const </span><span class="s0">SizedBox</span><span class="s2">(</span><span class="s0">height</span><span class="s2">: </span><span class="s5">3.0</span><span class="s2">),</span>
+
+                    <span class="s4">// Name Input</span>
+                    <span class="s0">_buildLabel</span><span class="s2">(</span><span class="s1">'Name'</span><span class="s2">),</span>
+                    <span class="s0">_buildTextField</span><span class="s2">(</span><span class="s0">controller</span><span class="s2">: </span><span class="s0">nameController</span><span class="s2">,</span><span class="s0">hintText</span><span class="s2">: </span><span class="s1">'Enter your name'</span><span class="s2">, </span><span class="s0">screenWidth</span><span class="s2">: </span><span class="s0">screenWidth</span><span class="s2">),</span>
+
+                    <span class="s4">// Email Input</span>
+                    <span class="s0">_buildLabel</span><span class="s2">(</span><span class="s1">'Email'</span><span class="s2">),</span>
+                    <span class="s0">_buildTextField</span><span class="s2">(</span><span class="s0">controller</span><span class="s2">: </span><span class="s0">emailController</span><span class="s2">,</span><span class="s0">hintText</span><span class="s2">: </span><span class="s1">'Enter your email'</span><span class="s2">, </span><span class="s0">screenWidth</span><span class="s2">: </span><span class="s0">screenWidth</span><span class="s2">),</span>
+
+                    <span class="s4">// Password Input</span>
+                    <span class="s0">_buildLabel</span><span class="s2">(</span><span class="s1">'Password'</span><span class="s2">),</span>
+                    <span class="s0">_buildTextField</span><span class="s2">(</span><span class="s0">controller</span><span class="s2">: </span><span class="s0">pwdController</span><span class="s2">,</span><span class="s0">hintText</span><span class="s2">: </span><span class="s1">'Enter your password'</span><span class="s2">, </span><span class="s0">screenWidth</span><span class="s2">: </span><span class="s0">screenWidth</span><span class="s2">, </span><span class="s0">obscureText</span><span class="s2">: </span><span class="s3">true</span><span class="s2">),</span>
+
+                    <span class="s4">// Gender Dropdown</span>
+                    <span class="s0">_buildLabel</span><span class="s2">(</span><span class="s1">'Gender'</span><span class="s2">),</span>
+                    <span class="s0">_buildDropdown</span><span class="s2">(</span>
+                      <span class="s0">value</span><span class="s2">: </span><span class="s0">_selectedGender</span><span class="s2">,</span>
+                      <span class="s0">items</span><span class="s2">: </span><span class="s0">_genders</span><span class="s2">,</span>
+                      <span class="s0">hint</span><span class="s2">: </span><span class="s1">'Select gender'</span><span class="s2">,</span>
+                      <span class="s0">onChanged</span><span class="s2">: (</span><span class="s0">value</span><span class="s2">) =&gt; </span><span class="s0">setState</span><span class="s2">(() =&gt; </span><span class="s0">_selectedGender </span><span class="s2">= </span><span class="s0">value</span><span class="s2">),</span>
+                      <span class="s0">screenWidth</span><span class="s2">: </span><span class="s0">screenWidth</span><span class="s2">,</span>
+                    <span class="s2">),</span>
+
+                    <span class="s4">// Grade Level Dropdown (Only for Students)</span>
+                    <span class="s3">if </span><span class="s2">(</span><span class="s0">widget</span><span class="s2">.</span><span class="s0">userRole </span><span class="s2">== </span><span class="s1">'student'</span><span class="s2">) </span><span class="s0">...</span><span class="s2">[</span>
+                      <span class="s0">_buildLabel</span><span class="s2">(</span><span class="s1">'Grade Level'</span><span class="s2">),</span>
+                      <span class="s0">_buildDropdown</span><span class="s2">(</span>
+                        <span class="s0">value</span><span class="s2">: </span><span class="s0">_selectedGrade</span><span class="s2">,</span>
+                        <span class="s0">items</span><span class="s2">: </span><span class="s0">_grades</span><span class="s2">,</span>
+                        <span class="s0">hint</span><span class="s2">: </span><span class="s1">'Select grade level'</span><span class="s2">,</span>
+                        <span class="s0">onChanged</span><span class="s2">: (</span><span class="s0">value</span><span class="s2">) =&gt; </span><span class="s0">setState</span><span class="s2">(() =&gt; </span><span class="s0">_selectedGrade </span><span class="s2">= </span><span class="s0">value</span><span class="s2">),</span>
+                        <span class="s0">screenWidth</span><span class="s2">: </span><span class="s0">screenWidth</span><span class="s2">,</span>
+                      <span class="s2">),</span>
+                    <span class="s2">],</span>
+
+                    <span class="s3">const </span><span class="s0">SizedBox</span><span class="s2">(</span><span class="s0">height</span><span class="s2">: </span><span class="s5">10.0</span><span class="s2">),</span>
+
+                    <span class="s4">// Sign Up Button</span>
+                    <span class="s0">Center</span><span class="s2">(</span>
+                      <span class="s0">child</span><span class="s2">: </span><span class="s0">SizedBox</span><span class="s2">(</span>
+                        <span class="s0">height</span><span class="s2">: </span><span class="s5">40.0</span><span class="s2">,</span>
+                        <span class="s0">width</span><span class="s2">: </span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">0.9</span><span class="s2">, </span><span class="s4">// Adjusted width</span>
+                        <span class="s0">child</span><span class="s2">: </span><span class="s0">ElevatedButton</span><span class="s2">(</span>
+                          <span class="s0">onPressed</span><span class="s2">: ()</span><span class="s0">async </span><span class="s2">{</span>
+                            <span class="s3">if </span><span class="s2">(</span><span class="s0">_selectedGender </span><span class="s2">== </span><span class="s3">null </span><span class="s2">|| </span><span class="s0">_selectedGrade </span><span class="s2">== </span><span class="s3">null </span><span class="s2">|| </span><span class="s0">nameController</span><span class="s2">.</span><span class="s0">text</span><span class="s2">.</span><span class="s0">isEmpty</span><span class="s2">){</span>
+                              <span class="s4">//Show error to user</span>
+                              <span class="s3">return</span><span class="s2">;</span>
+                            <span class="s2">}</span>
+                            <span class="s4">// Navigate to the corresponding home page based on the userRole</span>
+                            <span class="s3">if </span><span class="s2">(</span><span class="s0">widget</span><span class="s2">.</span><span class="s0">userRole </span><span class="s2">== </span><span class="s1">'student'</span><span class="s2">) {</span>
+                              <span class="s0">UserModel userModel </span><span class="s2">= </span><span class="s0">UserModel</span><span class="s2">( </span><span class="s0">name</span><span class="s2">: </span><span class="s0">nameController</span><span class="s2">.</span><span class="s0">text</span><span class="s2">, </span><span class="s0">email</span><span class="s2">: </span><span class="s0">emailController</span><span class="s2">.</span><span class="s0">text</span><span class="s2">, </span><span class="s0">userRole</span><span class="s2">: </span><span class="s0">widget</span><span class="s2">.</span><span class="s0">userRole</span><span class="s2">, </span><span class="s0">gender</span><span class="s2">: </span><span class="s0">_selectedGender</span><span class="s2">!, </span><span class="s0">gradeLevel</span><span class="s2">: </span><span class="s0">_selectedGrade</span><span class="s2">!, </span><span class="s0">createdAt</span><span class="s2">: </span><span class="s0">DateTime</span><span class="s2">.</span><span class="s0">now</span><span class="s2">(),);</span>
+                             <span class="s3">final </span><span class="s0">user </span><span class="s2">= </span><span class="s0">await AuthService</span><span class="s2">().</span><span class="s0">createNewUser</span><span class="s2">(</span><span class="s0">userModel</span><span class="s2">, </span><span class="s0">pwdController</span><span class="s2">.</span><span class="s0">text</span><span class="s2">);</span>
+                             <span class="s3">if </span><span class="s2">(</span><span class="s0">user </span><span class="s2">!= </span><span class="s3">null</span><span class="s2">) {</span>
+                               <span class="s0">Navigator</span><span class="s2">.</span><span class="s0">pushReplacement</span><span class="s2">(</span>
+                                 <span class="s0">context</span><span class="s2">,</span>
+                                 <span class="s0">MaterialPageRoute</span><span class="s2">(</span>
+                                     <span class="s0">builder</span><span class="s2">: (</span><span class="s0">_</span><span class="s2">) =&gt; </span><span class="s3">const </span><span class="s0">StudentHomePage</span><span class="s2">()),</span>
+                               <span class="s2">);</span>
+                             <span class="s2">}</span>
+                            <span class="s2">} </span><span class="s3">else if </span><span class="s2">(</span><span class="s0">widget</span><span class="s2">.</span><span class="s0">userRole </span><span class="s2">== </span><span class="s1">'tutor'</span><span class="s2">) {</span>
+                              <span class="s0">Navigator</span><span class="s2">.</span><span class="s0">pushReplacement</span><span class="s2">(</span>
+                                <span class="s0">context</span><span class="s2">,</span>
+                                <span class="s0">MaterialPageRoute</span><span class="s2">(</span><span class="s0">builder</span><span class="s2">: (</span><span class="s0">_</span><span class="s2">) =&gt; </span><span class="s0">TutorHomepage</span><span class="s2">()),</span>
+                              <span class="s2">);</span>
+                            <span class="s2">}</span><span class="s3">else if</span><span class="s2">(</span><span class="s0">widget</span><span class="s2">.</span><span class="s0">userRole </span><span class="s2">== </span><span class="s1">'parent'</span><span class="s2">){</span>
+                              <span class="s0">Navigator</span><span class="s2">.</span><span class="s0">pushReplacement</span><span class="s2">(</span>
+                                <span class="s0">context</span><span class="s2">,</span>
+                                <span class="s0">MaterialPageRoute</span><span class="s2">(</span>
+                                    <span class="s0">builder</span><span class="s2">: (</span><span class="s0">_</span><span class="s2">) =&gt; </span><span class="s3">const </span><span class="s0">ParentHomePage</span><span class="s2">()),</span>
+                              <span class="s2">);</span>
+                              <span class="s2">}</span>
+                            <span class="s2">},</span>
+                          <span class="s0">style</span><span class="s2">: </span><span class="s0">ElevatedButton</span><span class="s2">.</span><span class="s0">styleFrom</span><span class="s2">(</span>
+                            <span class="s0">backgroundColor</span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">black87</span><span class="s2">,</span>
+                            <span class="s0">shape</span><span class="s2">: </span><span class="s0">RoundedRectangleBorder</span><span class="s2">(</span>
+                              <span class="s0">borderRadius</span><span class="s2">: </span><span class="s0">BorderRadius</span><span class="s2">.</span><span class="s0">circular</span><span class="s2">(</span><span class="s5">8.0</span><span class="s2">),</span>
+                            <span class="s2">),</span>
+                          <span class="s2">),</span>
+                          <span class="s0">child</span><span class="s2">: </span><span class="s3">const </span><span class="s0">Text</span><span class="s2">(</span>
+                            <span class="s1">'Sign Up'</span><span class="s2">,</span>
+                            <span class="s0">style</span><span class="s2">: </span><span class="s0">TextStyle</span><span class="s2">(</span>
+                              <span class="s0">color</span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">white</span><span class="s2">,</span>
+                              <span class="s0">fontSize</span><span class="s2">: </span><span class="s5">16.0</span><span class="s2">, </span><span class="s4">// Reduced font size</span>
+                              <span class="s0">fontWeight</span><span class="s2">: </span><span class="s0">FontWeight</span><span class="s2">.</span><span class="s0">w600</span><span class="s2">,</span>
+                            <span class="s2">),</span>
+                          <span class="s2">),</span>
+                        <span class="s2">),</span>
+                      <span class="s2">),</span>
+                    <span class="s2">),</span>
+                    <span class="s3">const </span><span class="s0">SizedBox</span><span class="s2">(</span><span class="s0">height</span><span class="s2">: </span><span class="s5">5</span><span class="s2">),</span>
+
+                    <span class="s4">// Login Link</span>
+                    <span class="s0">Center</span><span class="s2">(</span>
+                      <span class="s0">child</span><span class="s2">: </span><span class="s0">RichText</span><span class="s2">(</span>
+                        <span class="s0">text</span><span class="s2">: </span><span class="s0">TextSpan</span><span class="s2">(</span>
+                          <span class="s0">text</span><span class="s2">: </span><span class="s1">&quot;Already have an account?&quot;</span><span class="s2">,</span>
+                          <span class="s0">style</span><span class="s2">: </span><span class="s3">const </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">color</span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">black87</span><span class="s2">),</span>
+                          <span class="s0">children</span><span class="s2">: [</span>
+                            <span class="s0">TextSpan</span><span class="s2">(</span>
+                              <span class="s0">text</span><span class="s2">: </span><span class="s1">' Login'</span><span class="s2">,</span>
+                              <span class="s0">style</span><span class="s2">: </span><span class="s3">const </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontWeight</span><span class="s2">: </span><span class="s0">FontWeight</span><span class="s2">.</span><span class="s0">w600</span><span class="s2">, </span><span class="s0">color</span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">lightBlue</span><span class="s2">),</span>
+                              <span class="s0">recognizer</span><span class="s2">: </span><span class="s0">TapGestureRecognizer</span><span class="s2">()</span>
+                                <span class="s2">..</span><span class="s0">onTap </span><span class="s2">= () =&gt; </span><span class="s0">Navigator</span><span class="s2">.</span><span class="s0">of</span><span class="s2">(</span><span class="s0">context</span><span class="s2">).</span><span class="s0">push</span><span class="s2">( </span><span class="s4">//here</span>
+                                  <span class="s0">MaterialPageRoute</span><span class="s2">(</span><span class="s0">builder</span><span class="s2">: (</span><span class="s0">_</span><span class="s2">) =&gt; </span><span class="s0">LoginPage</span><span class="s2">(</span><span class="s0">userRole</span><span class="s2">: </span><span class="s0">widget</span><span class="s2">.</span><span class="s0">userRole</span><span class="s2">,)),</span>
+                                <span class="s2">),</span>
+                            <span class="s2">),</span>
+                          <span class="s2">],</span>
+                        <span class="s2">),</span>
+                      <span class="s2">),</span>
+                    <span class="s2">),</span>
+                  <span class="s2">],</span>
+                <span class="s2">),</span>
+              <span class="s2">),</span>
+            <span class="s2">),</span>
+          <span class="s2">),</span>
+
+          <span class="s4">// Language Toggle Button, show only for Parent Role</span>
+          <span class="s3">if </span><span class="s2">(</span><span class="s0">widget</span><span class="s2">.</span><span class="s0">userRole </span><span class="s2">== </span><span class="s1">'parent'</span><span class="s2">)</span>
+            <span class="s0">Positioned</span><span class="s2">(</span>
+              <span class="s0">bottom</span><span class="s2">: </span><span class="s0">screenHeight </span><span class="s2">* </span><span class="s5">0.15</span><span class="s2">, </span><span class="s4">// Adjusted to bring it closer to the bottom</span>
+              <span class="s0">left</span><span class="s2">: </span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">0.40</span><span class="s2">,    </span><span class="s4">// Centered horizontally</span>
+              <span class="s0">child</span><span class="s2">: </span><span class="s0">Center</span><span class="s2">(</span>
+                <span class="s0">child</span><span class="s2">: </span><span class="s0">IconButton</span><span class="s2">(</span>
+                  <span class="s0">icon</span><span class="s2">: </span><span class="s0">Image</span><span class="s2">.</span><span class="s0">asset</span><span class="s2">(</span><span class="s1">'assets/img_18.png'</span><span class="s2">, </span><span class="s0">width</span><span class="s2">: </span><span class="s5">40</span><span class="s2">, </span><span class="s0">height</span><span class="s2">: </span><span class="s5">40</span><span class="s2">), </span><span class="s4">// Smaller size</span>
+                  <span class="s0">iconSize</span><span class="s2">: </span><span class="s5">40</span><span class="s2">, </span><span class="s4">// Smaller size</span>
+                  <span class="s0">onPressed</span><span class="s2">: () {</span>
+                    <span class="s0">Navigator</span><span class="s2">.</span><span class="s0">of</span><span class="s2">(</span><span class="s0">context</span><span class="s2">).</span><span class="s0">pushReplacement</span><span class="s2">(</span>
+                      <span class="s0">MaterialPageRoute</span><span class="s2">(</span><span class="s0">builder</span><span class="s2">: (</span><span class="s0">_</span><span class="s2">) =&gt; </span><span class="s3">const </span><span class="s0">SignUpPageAR</span><span class="s2">(</span><span class="s0">userRole</span><span class="s2">: </span><span class="s1">'parent'</span><span class="s2">)),</span>
+                    <span class="s2">);</span>
+                  <span class="s2">},</span>
+                <span class="s2">),</span>
+              <span class="s2">),</span>
+            <span class="s2">),</span>
+
+        <span class="s2">],</span>
+      <span class="s2">),</span>
+    <span class="s2">);</span>
+  <span class="s2">}</span>
+
+  <span class="s4">// Helper method to build input labels</span>
+  <span class="s0">Widget _buildLabel</span><span class="s2">(</span><span class="s0">String text</span><span class="s2">) {</span>
+    <span class="s3">return </span><span class="s0">Padding</span><span class="s2">(</span>
+      <span class="s0">padding</span><span class="s2">: </span><span class="s3">const </span><span class="s0">EdgeInsets</span><span class="s2">.</span><span class="s0">only</span><span class="s2">(</span><span class="s0">top</span><span class="s2">: </span><span class="s5">1.0</span><span class="s2">, </span><span class="s0">bottom</span><span class="s2">: </span><span class="s5">1.0</span><span class="s2">),</span>
+      <span class="s0">child</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span><span class="s0">text</span><span class="s2">, </span><span class="s0">style</span><span class="s2">: </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontSize</span><span class="s2">: </span><span class="s5">16.0</span><span class="s2">, </span><span class="s0">fontWeight</span><span class="s2">: </span><span class="s0">FontWeight</span><span class="s2">.</span><span class="s0">w500</span><span class="s2">)),</span>
+    <span class="s2">);</span>
+  <span class="s2">}</span>
+
+  <span class="s4">// Helper method to build text fields</span>
+  <span class="s0">Widget _buildTextField</span><span class="s2">({</span><span class="s0">required String hintText</span><span class="s2">, </span><span class="s0">required double screenWidth</span><span class="s2">, </span><span class="s0">bool obscureText </span><span class="s2">= </span><span class="s3">false</span><span class="s2">,</span><span class="s0">required TextEditingController controller</span><span class="s2">}) {</span>
+    <span class="s3">return </span><span class="s0">SizedBox</span><span class="s2">(</span>
+      <span class="s0">width</span><span class="s2">: </span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">0.9</span><span class="s2">, </span><span class="s4">// Adjusted width</span>
+      <span class="s0">child</span><span class="s2">: </span><span class="s0">TextFormField</span><span class="s2">(</span>
+        <span class="s0">controller</span><span class="s2">: </span><span class="s0">controller</span><span class="s2">,</span>
+        <span class="s0">obscureText</span><span class="s2">: </span><span class="s0">obscureText</span><span class="s2">,</span>
+        <span class="s0">decoration</span><span class="s2">: </span><span class="s0">InputDecoration</span><span class="s2">(</span>
+          <span class="s0">hintText</span><span class="s2">: </span><span class="s0">hintText</span><span class="s2">,</span>
+          <span class="s0">border</span><span class="s2">: </span><span class="s0">OutlineInputBorder</span><span class="s2">(</span><span class="s0">borderRadius</span><span class="s2">: </span><span class="s0">BorderRadius</span><span class="s2">.</span><span class="s0">circular</span><span class="s2">(</span><span class="s5">8.0</span><span class="s2">)),</span>
+          <span class="s0">contentPadding</span><span class="s2">: </span><span class="s0">EdgeInsets</span><span class="s2">.</span><span class="s0">symmetric</span><span class="s2">(</span><span class="s0">vertical</span><span class="s2">: </span><span class="s5">2.0</span><span class="s2">, </span><span class="s0">horizontal</span><span class="s2">: </span><span class="s5">10.0</span><span class="s2">), </span><span class="s4">// Compressed field height</span>
+        <span class="s2">),</span>
+        <span class="s0">style</span><span class="s2">: </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontSize</span><span class="s2">: </span><span class="s5">14.0</span><span class="s2">),</span>
+      <span class="s2">),</span>
+    <span class="s2">);</span>
+  <span class="s2">}</span>
+
+  <span class="s4">// Helper method to build dropdowns</span>
+  <span class="s0">Widget _buildDropdown</span><span class="s2">({</span>
+    <span class="s0">required String</span><span class="s2">? </span><span class="s0">value</span><span class="s2">,</span>
+    <span class="s0">required List</span><span class="s2">&lt;</span><span class="s0">String</span><span class="s2">&gt; </span><span class="s0">items</span><span class="s2">,</span>
+    <span class="s0">required String hint</span><span class="s2">,</span>
+    <span class="s0">required ValueChanged</span><span class="s2">&lt;</span><span class="s0">String</span><span class="s2">?&gt; </span><span class="s0">onChanged</span><span class="s2">,</span>
+    <span class="s0">required double screenWidth</span><span class="s2">,</span>
+  <span class="s2">}) {</span>
+    <span class="s3">return </span><span class="s0">SizedBox</span><span class="s2">(</span>
+      <span class="s0">width</span><span class="s2">: </span><span class="s0">screenWidth </span><span class="s2">* </span><span class="s5">0.9</span><span class="s2">, </span><span class="s4">// Adjusted width</span>
+      <span class="s0">child</span><span class="s2">: </span><span class="s0">DropdownButtonFormField</span><span class="s2">&lt;</span><span class="s0">String</span><span class="s2">&gt;(</span>
+        <span class="s0">value</span><span class="s2">: </span><span class="s0">value</span><span class="s2">,</span>
+        <span class="s0">decoration</span><span class="s2">: </span><span class="s0">InputDecoration</span><span class="s2">(</span>
+          <span class="s0">hintText</span><span class="s2">: </span><span class="s0">hint</span><span class="s2">,</span>
+          <span class="s0">border</span><span class="s2">: </span><span class="s0">OutlineInputBorder</span><span class="s2">(</span><span class="s0">borderRadius</span><span class="s2">: </span><span class="s0">BorderRadius</span><span class="s2">.</span><span class="s0">circular</span><span class="s2">(</span><span class="s5">8.0</span><span class="s2">)),</span>
+          <span class="s0">contentPadding</span><span class="s2">: </span><span class="s0">EdgeInsets</span><span class="s2">.</span><span class="s0">symmetric</span><span class="s2">(</span><span class="s0">vertical</span><span class="s2">: </span><span class="s5">2.0</span><span class="s2">, </span><span class="s0">horizontal</span><span class="s2">: </span><span class="s5">10.0</span><span class="s2">),</span>
+        <span class="s2">),</span>
+        <span class="s0">items</span><span class="s2">: </span><span class="s0">items</span><span class="s2">.</span><span class="s0">map</span><span class="s2">((</span><span class="s0">e</span><span class="s2">) =&gt; </span><span class="s0">DropdownMenuItem</span><span class="s2">(</span><span class="s0">value</span><span class="s2">: </span><span class="s0">e</span><span class="s2">, </span><span class="s0">child</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span><span class="s0">e</span><span class="s2">, </span><span class="s0">style</span><span class="s2">: </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontSize</span><span class="s2">: </span><span class="s5">14.0</span><span class="s2">)))).</span><span class="s0">toList</span><span class="s2">(),</span>
+        <span class="s0">onChanged</span><span class="s2">: </span><span class="s0">onChanged</span><span class="s2">,</span>
+      <span class="s2">),</span>
+    <span class="s2">);</span>
+  <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>

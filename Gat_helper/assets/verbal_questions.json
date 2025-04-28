@@ -1,0 +1,568 @@
+[
+  {
+    "question": "The Great Pyramid of Giza has shrunk about how many feet?",
+    "correct_answer": "30",
+    "wrong_answers": ["40", "50", "60"]
+  },
+  {
+    "question": "Most of the blocks in the pyramid weigh about how many tons?",
+    "correct_answer": "Two or three",
+    "wrong_answers": ["Five", "4500", "80"]
+  },
+  {
+    "question": "The Great Pyramid was built a little more than how many years ago?",
+    "correct_answer": "4500",
+    "wrong_answers": ["4400", "4600", "4700"]
+  },
+  {
+    "question": "Egyptians used polished which material to make the pyramid shine in the sun?",
+    "correct_answer": "Limestone",
+    "wrong_answers": ["Gypsum", "Calcium", "Gold"]
+  },
+  {
+    "question": "Which of the following is FALSE?",
+    "correct_answer": "Khufu was Hemon’s vizier and architect.",
+    "wrong_answers": ["Hemon was Khufu’s vizier and architect.", "The Pyramid took tens of thousands of workers about twenty years to complete.", "The Great Pyramid is the last of the Seven Wonders of the World."]
+  },
+  {
+    "question": "Where is the Great Pyramid NOT located?",
+    "correct_answer": "Southern Egypt",
+    "wrong_answers": ["Giza", "Sahara Desert", "Northern Egypt"]
+  },
+  {
+    "question": "Which is NOT part of the complex of pyramids?",
+    "correct_answer": "The Tomb of King Tut",
+    "wrong_answers": ["The Sphinx", "The Pyramid of Khafre", "The Great Pyramid of Giza"]
+  },
+  {
+    "question": "The Pharaoh _______ ordered the pyramid to be built as his _______.",
+    "correct_answer": "Khufu, tomb",
+    "wrong_answers": ["Hemon, tomb", "Khufu, wonder of the world", "Vizier, tomb"]
+  },
+  {
+    "question": "How many stone blocks make up the pyramid?",
+    "correct_answer": "More than two million",
+    "wrong_answers": ["3800", "4500", "2560"]
+  },
+  {
+    "question": "What is the main prey of the Arctic fox?",
+    "correct_answer": "Lemmings",
+    "wrong_answers": ["Insects", "Birds", "Eggs"]
+  },
+  {
+    "question": "Which of the following is NOT true about the Carib Indians?",
+    "correct_answer": "They were peaceful fishermen, hunters, and farmers.",
+    "wrong_answers": ["The sea was named after them.", "They ate human flesh.", "They settled after defeating the Arawak Indians."]
+  },
+  {
+    "question": "Where do Emperor Penguins breed?",
+    "correct_answer": "Antarctic Interior",
+    "wrong_answers": ["In the water", "South America", "Along the coast"]
+  },
+  {
+    "question": "What country was the first to send explorers to search for a sea route to Asia?",
+    "correct_answer": "Portugal",
+    "wrong_answers": ["Spain", "France", "England"]
+  },
+  {
+    "question": "What was the name of the explorer who first sailed through the Indian Ocean to India?",
+    "correct_answer": "Vasco de Gama",
+    "wrong_answers": ["Christopher Columbus", "Vasco Nunez de Balboa", "Hernando Cortes"]
+  },
+  {
+    "question": "Which of the following is NOT part of the diet of the Emperor Penguin?",
+    "correct_answer": "Seaweed",
+    "wrong_answers": ["Krill", "Crustaceans", "Fish"]
+  },
+  {
+    "question": "Which piece of information is true?",
+    "correct_answer": "Both parents feed their chicks by regurgitating food.",
+    "wrong_answers": ["After the egg is laid, the male penguin goes off to the ocean.", "The female locates her chick by touch.", "The female locates her chick by sight."]
+  },
+  {
+    "question": "Which of the following is NOT true about the great white shark?",
+    "correct_answer": "It lays eggs.",
+    "wrong_answers": ["It has a strong sense of smell.", "It can grow more than 20 feet long.", "It can detect electrical signals from prey."]
+  },
+  {
+    "question": "Which of the following is NOT a layer of the rainforest?",
+    "correct_answer": "Subcanopy",
+    "wrong_answers": ["Understory", "Canopy", "Emergent"]
+  },
+  {
+    "question": "What percentage of the world’s species are found in rainforests?",
+    "correct_answer": "50%",
+    "wrong_answers": ["10%", "25%", "75%"]
+  },
+  {
+    "question": "Which is the world's largest rainforest?",
+    "correct_answer": "Amazon",
+    "wrong_answers": ["Congo", "Daintree", "Sundaland"]
+  },
+  {
+    "question": "What is the primary reason rainforests are being destroyed?",
+    "correct_answer": "Logging and agriculture",
+    "wrong_answers": ["Climate change", "Tourism", "Animal overpopulation"]
+  },
+  {
+    "question": "Which of the following is NOT a characteristic of amphibians?",
+    "correct_answer": "They have scales.",
+    "wrong_answers": ["They have moist skin.", "They lay eggs in water.", "They go through metamorphosis."]
+  },
+  {
+    "question": "Which organ do fish use to extract oxygen from water?",
+    "correct_answer": "Gills",
+    "wrong_answers": ["Lungs", "Skin", "Fins"]
+  },
+  {
+    "question": "Which is NOT an example of a mammal?",
+    "correct_answer": "Crocodile",
+    "wrong_answers": ["Dolphin", "Bat", "Kangaroo"]
+  },
+  {
+    "question": "What type of rock is formed by cooling lava?",
+    "correct_answer": "Igneous",
+    "wrong_answers": ["Sedimentary", "Metamorphic", "Granite"]
+  },
+  {
+    "question": "What is the most abundant gas in Earth's atmosphere?",
+    "correct_answer": "Nitrogen",
+    "wrong_answers": ["Oxygen", "Carbon dioxide", "Argon"]
+  },
+  {
+    "question": "Which metal is liquid at room temperature?",
+    "correct_answer": "Mercury",
+    "wrong_answers": ["Iron", "Lead", "Aluminum"]
+  },
+  {
+    "question": "Which planet is the largest in the Solar System?",
+    "correct_answer": "Jupiter",
+    "wrong_answers": ["Saturn", "Earth", "Neptune"]
+  },
+  {
+    "question": "Which of the following is NOT a renewable energy source?",
+    "correct_answer": "Coal",
+    "wrong_answers": ["Solar", "Wind", "Hydroelectric"]
+  },
+  {
+    "question": "Which is the smallest planet in our solar system?",
+    "correct_answer": "Mercury",
+    "wrong_answers": ["Mars", "Venus", "Pluto"]
+  },
+  {
+    "question": "What is the hardest natural substance on Earth?",
+    "correct_answer": "Diamond",
+    "wrong_answers": ["Gold", "Iron", "Quartz"]
+  },
+  {
+    "question": "What is the capital of Canada?",
+    "correct_answer": "Ottawa",
+    "wrong_answers": ["Toronto", "Vancouver", "Montreal"]
+  },
+  {
+    "question": "Who developed the theory of general relativity?",
+    "correct_answer": "Albert Einstein",
+    "wrong_answers": ["Isaac Newton", "Galileo Galilei", "Stephen Hawking"]
+  },
+  {
+    "question": "Which continent is the driest?",
+    "correct_answer": "Antarctica",
+    "wrong_answers": ["Africa", "Australia", "Asia"]
+  },
+  {
+    "question": "What is the longest river in the world?",
+    "correct_answer": "Nile",
+    "wrong_answers": ["Amazon", "Yangtze", "Mississippi"]
+  },
+  {
+    "question": "Which is the largest mammal on Earth?",
+    "correct_answer": "Blue Whale",
+    "wrong_answers": ["Elephant", "Giraffe", "Hippopotamus"]
+  },
+  {
+    "question": "Which country is known as the Land of the Rising Sun?",
+    "correct_answer": "Japan",
+    "wrong_answers": ["China", "South Korea", "Thailand"]
+  },
+  {
+    "question": "What gas do plants primarily absorb from the atmosphere?",
+    "correct_answer": "Carbon Dioxide",
+    "wrong_answers": ["Oxygen", "Nitrogen", "Hydrogen"]
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "correct_answer": "Mars",
+    "wrong_answers": ["Venus", "Jupiter", "Saturn"]
+  },
+  {
+    "question": "What is the main language spoken in Brazil?",
+    "correct_answer": "Portuguese",
+    "wrong_answers": ["Spanish", "French", "English"]
+  },
+  {
+    "question": "Which ocean is the largest?",
+    "correct_answer": "Pacific Ocean",
+    "wrong_answers": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean"]
+  },
+  {
+    "question": "What is the chemical symbol for gold?",
+    "correct_answer": "Au",
+    "wrong_answers": ["Ag", "Pb", "Fe"]
+  },
+  {
+    "question": "Which country has the largest population in the world?",
+    "correct_answer": "China",
+    "wrong_answers": ["India", "USA", "Russia"]
+  },
+  {
+    "question": "Which organ in the human body produces insulin?",
+    "correct_answer": "Pancreas",
+    "wrong_answers": ["Liver", "Kidney", "Stomach"]
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "correct_answer": "Mount Everest",
+    "wrong_answers": ["K2", "Kangchenjunga", "Makalu"]
+  },
+  {
+    "question": "Which gas do humans primarily breathe in?",
+    "correct_answer": "Oxygen",
+    "wrong_answers": ["Carbon Dioxide", "Nitrogen", "Helium"]
+  },
+  {
+    "question": "What is the national currency of Japan?",
+    "correct_answer": "Yen",
+    "wrong_answers": ["Won", "Ringgit", "Peso"]
+  },
+  {
+    "question": "Which metal is the best conductor of electricity?",
+    "correct_answer": "Silver",
+    "wrong_answers": ["Copper", "Gold", "Aluminum"]
+  },
+  {
+    "question": "What is the capital of France?",
+    "correct_answer": "Paris",
+    "wrong_answers": ["London", "Berlin", "Rome"]
+  },
+  {
+    "question": "Which country gifted the Statue of Liberty to the United States?",
+    "correct_answer": "France",
+    "wrong_answers": ["Germany", "Spain", "Italy"]
+  },
+  {
+    "question": "Which element is necessary for combustion?",
+    "correct_answer": "Oxygen",
+    "wrong_answers": ["Carbon", "Nitrogen", "Hydrogen"]
+  },
+  {
+    "question": "What is the boiling point of water in Celsius?",
+    "correct_answer": "100",
+    "wrong_answers": ["90", "120", "150"]
+  },
+  {
+    "question": "Which planet is known as the Morning Star?",
+    "correct_answer": "Venus",
+    "wrong_answers": ["Mercury", "Mars", "Saturn"]
+  },
+  {
+    "question": "Which organ pumps blood throughout the body?",
+    "correct_answer": "Heart",
+    "wrong_answers": ["Lungs", "Brain", "Liver"]
+  },
+  {
+    "question": "What is the chemical formula of water?",
+    "correct_answer": "H2O",
+    "wrong_answers": ["CO2", "O2", "H2SO4"]
+  },
+  {
+    "question": "Which country is known for inventing pizza?",
+    "correct_answer": "Italy",
+    "wrong_answers": ["France", "Greece", "Spain"]
+  },
+  {
+    "question": "Who wrote 'Romeo and Juliet'?",
+    "correct_answer": "William Shakespeare",
+    "wrong_answers": ["Charles Dickens", "Jane Austen", "Leo Tolstoy"]
+  },
+  {
+    "question": "What is the largest bone in the human body?",
+    "correct_answer": "Femur",
+    "wrong_answers": ["Humerus", "Tibia", "Radius"]
+  },
+  {
+    "question": "Which vitamin is produced when the skin is exposed to sunlight?",
+    "correct_answer": "Vitamin D",
+    "wrong_answers": ["Vitamin C", "Vitamin A", "Vitamin B12"]
+  },
+  {
+    "question": "Which gas is used by plants for photosynthesis?",
+    "correct_answer": "Carbon Dioxide",
+    "wrong_answers": ["Oxygen", "Nitrogen", "Methane"]
+  },
+  {
+    "question": "Which country is famous for the Eiffel Tower?",
+    "correct_answer": "France",
+    "wrong_answers": ["Italy", "Germany", "Spain"]
+  },
+  {
+    "question": "How many continents are there on Earth?",
+    "correct_answer": "Seven",
+    "wrong_answers": ["Six", "Eight", "Five"]
+  },
+  {
+    "question": "Which bird is known for its ability to mimic human speech?",
+    "correct_answer": "Parrot",
+    "wrong_answers": ["Eagle", "Owl", "Hawk"]
+  },
+  {
+    "question": "Which part of the plant conducts photosynthesis?",
+    "correct_answer": "Leaf",
+    "wrong_answers": ["Stem", "Root", "Flower"]
+  },
+  {
+    "question": "Which is the largest desert in the world?",
+    "correct_answer": "Antarctic Desert",
+    "wrong_answers": ["Sahara", "Gobi", "Kalahari"]
+  },
+  {
+    "question": "Which blood type is known as the universal donor?",
+    "correct_answer": "O negative",
+    "wrong_answers": ["A positive", "B positive", "AB positive"]
+  },
+  {
+    "question": "Which part of the body produces red blood cells?",
+    "correct_answer": "Bone marrow",
+    "wrong_answers": ["Liver", "Heart", "Lungs"]
+  },
+  {
+    "question": "Which of the following is NOT a primary color?",
+    "correct_answer": "Green",
+    "wrong_answers": ["Red", "Blue", "Yellow"]
+  },
+  {
+    "question": "Which continent is the most populous?",
+    "correct_answer": "Asia",
+    "wrong_answers": ["Africa", "Europe", "North America"]
+  },
+  {
+    "question": "Which is the world's highest waterfall?",
+    "correct_answer": "Angel Falls",
+    "wrong_answers": ["Niagara Falls", "Victoria Falls", "Iguazu Falls"]
+  },
+  {
+    "question": "What is the main ingredient in guacamole?",
+    "correct_answer": "Avocado",
+    "wrong_answers": ["Tomato", "Lettuce", "Cucumber"]
+  },
+  {
+    "question": "Which is the smallest continent by land area?",
+    "correct_answer": "Australia",
+    "wrong_answers": ["Antarctica", "Europe", "South America"]
+  },
+
+  {
+    "question": "Which is the longest bone in the human body?",
+    "correct_answer": "Femur",
+    "wrong_answers": ["Tibia", "Fibula", "Humerus"]
+  },
+  {
+    "question": "Which ocean is the coldest?",
+    "correct_answer": "Arctic Ocean",
+    "wrong_answers": ["Pacific Ocean", "Indian Ocean", "Atlantic Ocean"]
+  },
+  {
+    "question": "What is the main gas in Earth's atmosphere?",
+    "correct_answer": "Nitrogen",
+    "wrong_answers": ["Oxygen", "Carbon Dioxide", "Argon"]
+  },
+  {
+    "question": "Which is the fastest land animal?",
+    "correct_answer": "Cheetah",
+    "wrong_answers": ["Lion", "Horse", "Greyhound"]
+  },
+  {
+    "question": "Which is the largest land carnivore?",
+    "correct_answer": "Polar Bear",
+    "wrong_answers": ["Lion", "Tiger", "Grizzly Bear"]
+  },
+  {
+    "question": "Which country is home to Mount Everest?",
+    "correct_answer": "Nepal",
+    "wrong_answers": ["India", "China", "Pakistan"]
+  },
+  {
+    "question": "Which instrument is used to measure temperature?",
+    "correct_answer": "Thermometer",
+    "wrong_answers": ["Barometer", "Hygrometer", "Anemometer"]
+  },
+  {
+    "question": "Which is the capital city of Australia?",
+    "correct_answer": "Canberra",
+    "wrong_answers": ["Sydney", "Melbourne", "Brisbane"]
+  },
+  {
+    "question": "Which planet is closest to the Sun?",
+    "correct_answer": "Mercury",
+    "wrong_answers": ["Venus", "Earth", "Mars"]
+  },
+  {
+    "question": "What is the square root of 144?",
+    "correct_answer": "12",
+    "wrong_answers": ["10", "14", "16"]
+  },
+  {
+    "question": "Which animal is known as the King of the Jungle?",
+    "correct_answer": "Lion",
+    "wrong_answers": ["Tiger", "Elephant", "Gorilla"]
+  },
+  {
+    "question": "Which is the largest internal organ in the human body?",
+    "correct_answer": "Liver",
+    "wrong_answers": ["Heart", "Lungs", "Brain"]
+  },
+  {
+    "question": "How many chambers does the human heart have?",
+    "correct_answer": "Four",
+    "wrong_answers": ["Two", "Three", "Five"]
+  },
+  {
+    "question": "What is the capital of Germany?",
+    "correct_answer": "Berlin",
+    "wrong_answers": ["Munich", "Hamburg", "Frankfurt"]
+  },
+  {
+    "question": "Which continent is known as the birthplace of humanity?",
+    "correct_answer": "Africa",
+    "wrong_answers": ["Asia", "Europe", "Australia"]
+  },
+  {
+    "question": "What is the chemical symbol for silver?",
+    "correct_answer": "Ag",
+    "wrong_answers": ["Au", "Si", "Pb"]
+  },
+  {
+    "question": "Which gas is commonly known as laughing gas?",
+    "correct_answer": "Nitrous Oxide",
+    "wrong_answers": ["Carbon Dioxide", "Oxygen", "Methane"]
+  },
+  {
+    "question": "Which ocean is the deepest?",
+    "correct_answer": "Pacific Ocean",
+    "wrong_answers": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean"]
+  },
+  {
+    "question": "What is the chemical formula for table salt?",
+    "correct_answer": "NaCl",
+    "wrong_answers": ["H2O", "CO2", "KCl"]
+  },
+  {
+    "question": "Which planet is known as the Blue Planet?",
+    "correct_answer": "Earth",
+    "wrong_answers": ["Neptune", "Uranus", "Mars"]
+  },
+  {
+    "question": "What is the primary gas found in Earth's atmosphere?",
+    "correct_answer": "Nitrogen",
+    "wrong_answers": ["Oxygen", "Carbon Dioxide", "Helium"]
+  },
+  {
+    "question": "Which country is home to the Great Wall?",
+    "correct_answer": "China",
+    "wrong_answers": ["Japan", "India", "Mongolia"]
+  },
+  {
+    "question": "Which organ in the human body produces bile?",
+    "correct_answer": "Liver",
+    "wrong_answers": ["Pancreas", "Kidney", "Stomach"]
+  },
+  {
+    "question": "Which is the largest land animal?",
+    "correct_answer": "African Elephant",
+    "wrong_answers": ["Blue Whale", "Giraffe", "Hippopotamus"]
+  },
+  {
+    "question": "What is the speed of light in a vacuum?",
+    "correct_answer": "299,792,458 meters per second",
+    "wrong_answers": ["150,000,000 meters per second", "1,080,000,000 km/h", "300,000 meters per second"]
+  },
+  {
+    "question": "Which is the largest island in the world?",
+    "correct_answer": "Greenland",
+    "wrong_answers": ["Madagascar", "Borneo", "New Guinea"]
+  },
+  {
+    "question": "Which element has the chemical symbol 'Fe'?",
+    "correct_answer": "Iron",
+    "wrong_answers": ["Fluorine", "Gold", "Silver"]
+  },
+  {
+    "question": "Which U.S. state is known as the Sunshine State?",
+    "correct_answer": "Florida",
+    "wrong_answers": ["California", "Arizona", "Texas"]
+  },
+  {
+    "question": "What is the capital city of Russia?",
+    "correct_answer": "Moscow",
+    "wrong_answers": ["Saint Petersburg", "Kiev", "Warsaw"]
+  },
+  {
+    "question": "Which is the longest river in Africa?",
+    "correct_answer": "Nile River",
+    "wrong_answers": ["Congo River", "Zambezi River", "Niger River"]
+  },
+  {
+    "question": "What is the largest moon in our Solar System?",
+    "correct_answer": "Ganymede",
+    "wrong_answers": ["Titan", "Callisto", "Io"]
+  },
+  {
+    "question": "Which country has the most natural lakes?",
+    "correct_answer": "Canada",
+    "wrong_answers": ["USA", "Russia", "Brazil"]
+  },
+  {
+    "question": "What is the chemical symbol for gold?",
+    "correct_answer": "Au",
+    "wrong_answers": ["Ag", "Pb", "Fe"]
+  },
+  {
+    "question": "Which human sense is most closely linked to memory?",
+    "correct_answer": "Smell",
+    "wrong_answers": ["Sight", "Touch", "Hearing"]
+  },
+  {
+    "question": "Which desert is the largest hot desert in the world?",
+    "correct_answer": "Sahara",
+    "wrong_answers": ["Gobi", "Mojave", "Kalahari"]
+  },
+  {
+    "question": "Which country is known as the Land of Fire and Ice?",
+    "correct_answer": "Iceland",
+    "wrong_answers": ["Norway", "Canada", "Greenland"]
+  },
+  {
+    "question": "Which part of the brain controls balance and coordination?",
+    "correct_answer": "Cerebellum",
+    "wrong_answers": ["Cerebrum", "Medulla", "Hypothalamus"]
+  },
+  {
+    "question": "What is the main ingredient in traditional Japanese miso soup?",
+    "correct_answer": "Soybean paste",
+    "wrong_answers": ["Rice", "Seaweed", "Tofu"]
+  },
+  {
+    "question": "Which is the only continent without a desert?",
+    "correct_answer": "Europe",
+    "wrong_answers": ["Asia", "North America", "South America"]
+  },
+  {
+    "question": "Which gas do plants release during photosynthesis?",
+    "correct_answer": "Oxygen",
+    "wrong_answers": ["Carbon Dioxide", "Nitrogen", "Methane"]
+  },
+  {
+    "question": "Which sea is the saltiest natural body of water?",
+    "correct_answer": "Dead Sea",
+    "wrong_answers": ["Red Sea", "Mediterranean Sea", "Caspian Sea"]
+  }
+]
